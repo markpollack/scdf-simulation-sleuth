@@ -1,0 +1,241 @@
+[
+  {
+    "traceId": "13b24055d5dbeb49",
+    "id": "13b24055d5dbeb49",
+    "name": "message:output",
+    "timestamp": 1500402201150000,
+    "duration": 10000,
+    "annotations": [
+      {
+        "timestamp": 1500402201151000,
+        "value": "cs",
+        "endpoint": {
+          "serviceName": "emailsource",
+          "ipv4": "10.55.8.61",
+          "port": 8088
+        }
+      },
+      {
+        "timestamp": 1500402201161000,
+        "value": "cr",
+        "endpoint": {
+          "serviceName": "emailsource",
+          "ipv4": "10.55.8.61",
+          "port": 8088
+        }
+      }
+    ],
+    "binaryAnnotations": [
+      {
+        "key": "payload",
+        "value": "Email{to=info@example.com, body=Hello}",
+        "endpoint": {
+          "serviceName": "emailsource",
+          "ipv4": "10.55.8.61",
+          "port": 8088
+        }
+      },
+      {
+        "key": "spring.instance_id",
+        "value": "10.55.8.61:emailSource:8088",
+        "endpoint": {
+          "serviceName": "emailsource",
+          "ipv4": "10.55.8.61",
+          "port": 8088
+        }
+      }
+    ]
+  },
+  {
+    "traceId": "13b24055d5dbeb49",
+    "id": "72255280fad8f86c",
+    "name": "message:input",
+    "parentId": "13b24055d5dbeb49",
+    "timestamp": 1500402201163000,
+    "duration": 20587,
+    "annotations": [
+      {
+        "timestamp": 1500402201163000,
+        "value": "sr",
+        "endpoint": {
+          "serviceName": "emailtap",
+          "ipv4": "10.55.8.61",
+          "port": 8091
+        }
+      },
+      {
+        "timestamp": 1500402201184000,
+        "value": "ss",
+        "endpoint": {
+          "serviceName": "emailtap",
+          "ipv4": "10.55.8.61",
+          "port": 8091
+        }
+      }
+    ],
+    "binaryAnnotations": [
+      {
+        "key": "payload",
+        "value": "Email{to=info@example.com, body=Hello}",
+        "endpoint": {
+          "serviceName": "emailtap",
+          "ipv4": "10.55.8.61",
+          "port": 8091
+        }
+      },
+      {
+        "key": "spring.instance_id",
+        "value": "10.55.8.61:emailTap:8091",
+        "endpoint": {
+          "serviceName": "emailtap",
+          "ipv4": "10.55.8.61",
+          "port": 8091
+        }
+      }
+    ]
+  },
+  {
+    "traceId": "13b24055d5dbeb49",
+    "id": "57a8a3fb6204788d",
+    "name": "message:input",
+    "parentId": "13b24055d5dbeb49",
+    "timestamp": 1500402201183000,
+    "duration": 15953,
+    "annotations": [
+      {
+        "timestamp": 1500402201183000,
+        "value": "sr",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      },
+      {
+        "timestamp": 1500402201199000,
+        "value": "ss",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      }
+    ],
+    "binaryAnnotations": [
+      {
+        "key": "payload",
+        "value": "Email{to=info@example.com, body=Hello}",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      },
+      {
+        "key": "spring.instance_id",
+        "value": "10.55.8.61:emailTransformer:8089",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      }
+    ]
+  },
+  {
+    "traceId": "13b24055d5dbeb49",
+    "id": "f0e6cd55bdf4cb32",
+    "name": "message:output",
+    "parentId": "57a8a3fb6204788d",
+    "timestamp": 1500402201186000,
+    "duration": 3000,
+    "annotations": [
+      {
+        "timestamp": 1500402201186000,
+        "value": "cs",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      },
+      {
+        "timestamp": 1500402201189000,
+        "value": "cr",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      }
+    ],
+    "binaryAnnotations": [
+      {
+        "key": "payload",
+        "value": "Email{to=info@example.com, body=Hello-transformed}",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      },
+      {
+        "key": "spring.instance_id",
+        "value": "10.55.8.61:emailTransformer:8089",
+        "endpoint": {
+          "serviceName": "emailtransformer",
+          "ipv4": "10.55.8.61",
+          "port": 8089
+        }
+      }
+    ]
+  },
+  {
+    "traceId": "13b24055d5dbeb49",
+    "id": "25295586ab3ca433",
+    "name": "message:input",
+    "parentId": "f0e6cd55bdf4cb32",
+    "timestamp": 1500402201190000,
+    "duration": 50800,
+    "annotations": [
+      {
+        "timestamp": 1500402201191000,
+        "value": "sr",
+        "endpoint": {
+          "serviceName": "emailsink",
+          "ipv4": "10.55.8.61",
+          "port": 8090
+        }
+      },
+      {
+        "timestamp": 1500402201241000,
+        "value": "ss",
+        "endpoint": {
+          "serviceName": "emailsink",
+          "ipv4": "10.55.8.61",
+          "port": 8090
+        }
+      }
+    ],
+    "binaryAnnotations": [
+      {
+        "key": "payload",
+        "value": "Email{to=info@example.com, body=Hello-transformed}",
+        "endpoint": {
+          "serviceName": "emailsink",
+          "ipv4": "10.55.8.61",
+          "port": 8090
+        }
+      },
+      {
+        "key": "spring.instance_id",
+        "value": "10.55.8.61:emailSink:8090",
+        "endpoint": {
+          "serviceName": "emailsink",
+          "ipv4": "10.55.8.61",
+          "port": 8090
+        }
+      }
+    ]
+  }
+]
