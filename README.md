@@ -1,6 +1,6 @@
 # scdf-simulation
 
-Experimenting with https://github.com/spring-cloud/spring-cloud-sleuth with four Spring Cloud Stream applications.  These simulate the flow of a stream and a 'tap' in SCDF.  That is
+Experimenting with https://cloud.spring.io/spring-cloud-sleuth/[Spring Cloud Sleuth] with four https://cloud.spring.io/spring-cloud-stream/[Spring Cloud Stream] applications.  These apps simulate the flow of a stream and a 'tap' in SCDF.  That is
 
 ```
 stream1 = source | transformer | sink
@@ -12,6 +12,8 @@ The transformer app has a sleep of 50ms to simulate processing and the tap has a
 Steps
 
 # Install RabbitMQ
+
+Follow one of the installation paths on https://www.rabbitmq.com/download.html
 
 # Install and run Zipkin
 ```
@@ -54,5 +56,7 @@ The white spaces between the bars is the time spent on the wire and inside the b
 Each application has an instance of `ProvenanceInterceptor` that adds key-value pairs to the trace.  It is ordered to execute after the `IntegrationTraceChannelInterceptor` that is part of Sleuth and autoconfigured.
 
 ![Zipkin Trace view](/zipkin-trace-ui.png)
+
+![Zipkin Trace detail](/zipkin-trace-detail.png)
 
 The [Trace JSON](trace.json) file can be used to build other views that show the topology over the timeline.
