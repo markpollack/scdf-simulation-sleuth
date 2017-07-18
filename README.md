@@ -55,9 +55,11 @@ If you click on the light blue rectangles in the trace diagram, the payload is l
 
 The white spaces between the bars is the time spent on the wire and inside the broker.
 
-Each application has an instance of `ProvenanceInterceptor` that adds key-value pairs to the trace.  It is ordered to execute after the `IntegrationTraceChannelInterceptor` that is part of Sleuth and autoconfigured.
+Each application has an instance of [ProvenanceInterceptor](https://github.com/markpollack/scdf-simulation-sleuth/blob/master/transformer/src/main/java/hello/ProvenanceInterceptor.java) that adds key-value pairs to the trace.  It is ordered to execute after the `IntegrationTraceChannelInterceptor` that is part of Sleuth and autoconfigured.
 
 ![Zipkin Trace view](/zipkin-trace-ui.png)
+
+The trace detail of the send from the transformer is shown below.
 
 ![Zipkin Trace detail](/zipkin-trace-detail.png)
 
